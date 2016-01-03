@@ -1,0 +1,39 @@
+<PARAMS>
+
+    <testcases>1,2,1001,8,1002,8</testcases>
+
+    <SCALE>
+        <size>3</size>
+        <max>3</max>
+    </SCALE>
+
+    <DEPENDENCY>
+        <path>/tests/SCPFscaleTopo/Dependency/</path>
+        <wrapper1>startUp</wrapper1>
+        <wrapper2>scaleTopoFunction</wrapper2>
+        <wrapper3>topo</wrapper3>
+        <topology>spine.py</topology>
+        <multiovs>multiovs.py</multiovs>
+        <spine>spine,15,30</spine>
+        <torus>torus,28,28</torus>
+    </DEPENDENCY>
+
+    <ENV>
+        <cellApps>drivers,openflow,fwd</cellApps>
+    </ENV>
+
+    <GIT>
+        <pull>False</pull>
+        <branch>master</branch>
+    </GIT>
+
+    <CTRL>
+        <port>6633</port>
+    </CTRL>
+
+    <SLEEP>
+        <startup>15</startup>
+        <fwd>30</fwd>
+    </SLEEP>
+
+</PARAMS>

@@ -1,0 +1,46 @@
+<PARAMS>
+    # CASE - Description
+    # 1 - Variable initialization and optional pull and build ONOS package
+    # 2 - Create Router northbound test
+    # 3 - Update Router northbound test
+    # 4 - Delete Router northbound test
+    # 5 - Create RouterInterface northbound test
+    # 6 - Delete RouterInterface northbound test
+    # 7 - Create Floatingip northbound test
+    # 8 - Update Floatingip northbound test
+    # 9 - Delete Floatingip northbound test
+    #10 - Create Gateway northbound test
+    #11 - Update Gateway northbound test
+    #12 - Delete Gateway northbound test
+    <testcases>2,3,4,5,6,7,8,9,10,11,12</testcases>
+
+    <SLEEP>
+        <startup>15</startup>
+    </SLEEP>
+
+    <ENV>
+        <cellName>singlenode</cellName>
+        <cellApps>drivers,openflow,proxyarp,mobility</cellApps>
+    </ENV>
+
+    <CTRL>
+        <ip1>OC1</ip1>
+        <port1>6653</port1>
+    </CTRL>
+
+    <HTTP>
+        <port>8181</port>
+        <path>/onos/vtn/</path>
+    </HTTP>
+
+    <GIT>
+        <pull>False</pull>
+        <branch>master</branch>
+    </GIT>
+
+    <MININET>
+        <switch>7</switch>
+        <links>20</links>
+    </MININET>
+
+</PARAMS>

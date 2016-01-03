@@ -1,0 +1,44 @@
+<PARAMS>
+    # CASE - Description
+    # 1 - Compile ONOS and push it to the test machines
+    # 2 - Configure Network Subnet Port
+    # 3 - Test through East-West and South-North 
+    # 4 - Clear ovs configuration and host configuration
+
+    <testcases>1,2,3,4</testcases>
+   
+    <DEPENDENCY>
+        <path>/tests/FUNCovsdbtestL3/Dependency/</path>
+    </DEPENDENCY>
+
+    <ENV>
+        <cellName>singlenode</cellName>
+        <cellApps>drivers,openflow,proxyarp,mobility</cellApps>
+    </ENV>
+
+    <CTRL>
+        <ip1>OC1</ip1>
+        <port1>6653</port1>
+        <ovsdbport>6640</ovsdbport>
+    </CTRL>
+
+    <TIMER>
+        <delaytime>5</delaytime>      #delaytime for ovsdb connection create and delete
+    </TIMER>
+
+    <HTTP>
+        <port>8181</port>
+        <path>/onos/vtn/</path>
+    </HTTP>
+
+    <GIT>
+        <pull>False</pull>
+        <branch>master</branch>
+    </GIT>
+
+    <OVSDB>
+        <ip1>OCN</ip1>
+        <ip2>OC1</ip2>
+    </OVSDB>
+
+</PARAMS>
